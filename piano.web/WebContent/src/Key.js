@@ -4,8 +4,9 @@ export class Key {
      * 
      * @param {boolean} whiteKey true if the key is white, false if black
      * @param {string} audioFileName name of the mp3 file to play
+     * @param {string} keyText text to display on the key
      */
-    constructor(whiteKey, audioFileName) {
+    constructor(whiteKey, audioFileName, keyText) {
         // Create div for key and add appropriate class
         this.el = /** @type {HTMLButtonElement} */ document.createElement('button');
         this.el.classList.add('key');
@@ -13,8 +14,8 @@ export class Key {
         this.el.classList.add(classToAdd);
         
         // Add text on key
-        //this.text = document.createTextNode('Key');
-        //this.el.appendChild(this.text);
+        this.text = document.createTextNode(keyText);
+        this.el.appendChild(this.text);
 
         // TODO figure out how to configure build so don't have to
         // write file path like this

@@ -1,3 +1,5 @@
+@import 'Key.css';
+
 .piano {
     background-color: #8c8c8c;
     outline: solid;
@@ -19,17 +21,6 @@
     padding: 25px;
 }
 
-.key {
-    height: inherit;
-    border-style: solid;
-    border-radius: 0px 0px 10px 10px;
-    cursor: pointer;
-}
-
-.key:focus {
-    outline: none;
-}
-
 .blackKeysContainer {
     display: inline-block;
     height: 200px;
@@ -38,47 +29,7 @@
     left: 30px;
 }
 
-.key-black {
-    background-color: black;
-    outline: none;
-    box-shadow:  0 3px 3pt 0px black;
-    width: 50px;
-    display: inline-block;
-    position: relative;
-    margin-left: 25px;
-}
-
-.key-black.Gb4, .key-black.Db5 {
-    margin-left: 100px;
-}
-
-.key-black:active {
-    box-shadow: inset 0px 0px 10px black;
-    outline: none;
-}
-
-.key-black:hover {
-    background-color: #4d4d4d;
-}
-
 .whiteKeysContainer {
     display: inline-block;
     height: inherit;
-}
-
-.key-white {
-    background-color: white;
-    width: 75px;
-    border: black;
-    box-shadow: 0px 0px 3pt 0px black;
-    display: inline-flex;
-}
-
-.key-white:active {
-    box-shadow: inset 0px 0px 10px black;
-    outline: none;
-}
-
-.key-white:hover {
-    background-color: #f2f2f2;
 }
