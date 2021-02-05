@@ -13,6 +13,14 @@
     outline: none;
 }
 
+.key-text {
+    width: 100%;
+}
+
+.key-text.hide {
+    visibility: hidden;
+}
+
 .key-white {
     background-color: white;
     width: 75px;

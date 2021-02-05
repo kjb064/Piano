@@ -1,4 +1,7 @@
 @import 'Key.css';
+:root {
+    --keys-container-height: 260px;
+}
 
 .piano {
     background-color: #8c8c8c;
@@ -17,15 +20,15 @@
 }
 
 .keysContainer {
-    height: 250px;
+    height: var(--keys-container-height);
     padding: 25px;
 }
 
 .blackKeysContainer {
     display: inline-block;
-    height: 200px;
+    height: calc((var(--keys-container-height) / 2) + 30px);
     position: relative;
-    bottom: 258px;
+    bottom: 263px;
     left: 30px;
 }
 

@@ -12,10 +12,13 @@ export class Key {
         this.el.classList.add('key');
         const classToAdd = whiteKey ? 'key-white' : 'key-black';
         this.el.classList.add(classToAdd);
-        
+                
         // Add text on key
-        this.text = document.createTextNode(keyText);
-        this.el.appendChild(this.text);
+        this.textContainer = /** @type {HTMLDivElement} */ document.createElement('div');
+        this.textContainer.classList.add('key-text');
+        this.textContainer.classList.add('hide')
+        this.textContainer.appendChild(document.createTextNode(keyText));
+        this.el.appendChild(this.textContainer);
 
         // TODO figure out how to configure build so don't have to
         // write file path like this
@@ -33,11 +36,7 @@ export class Key {
      * Toggles showing the text on the key.
      */
     toggleKeyText() {
-        // if (!this.text.style.display || this.text.style.display === 'none') {
-        //     this.text.style.display = 'inline-block';
-        // } else {
-        //     this.text.style.display = 'none';
-        // }  
+        this.textContainer.classList.toggle('hide');
     }
     
 }

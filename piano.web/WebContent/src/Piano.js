@@ -1,6 +1,9 @@
 import { Key } from './Key.js';
 
 export class Piano {
+    /**
+     * Constructs a new Piano.
+     */
     constructor() {
         this.el = /** @type {HTMLDivElement} */ document.createElement('div');
         this.el.classList.add('piano');
@@ -15,6 +18,9 @@ export class Piano {
      * @private
      */
     buildKeys() {
+        // TODO remove key-specific containers to prevent issue of not being able
+        // to click a white key in between two black keys.
+
 	    let keysContainer = /** @type {HTMLDivElement} */ document.createElement('div');
 	    keysContainer.classList.add('keysContainer');
 	    this.el.appendChild(keysContainer);
