@@ -26,6 +26,7 @@
     width: 75px;
     border: black;
     box-shadow: 0px 0px 3pt 0px black;
+    height: inherit;
 }
 
 .key-white:active, .key-white-pressed {
@@ -43,8 +44,11 @@
     outline: none;
     box-shadow:  0 3px 3pt 0px black;
     width: 50px;
-    position: relative;
     margin-left: 25px;
+    height: calc((var(--keys-container-height) / 2) + 30px);
+    position: relative;
+    bottom: 263px;
+    left: 25px;
 }
 
 .key-black.Gb4, .key-black.Db5 {

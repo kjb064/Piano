@@ -19,20 +19,7 @@
     padding-right: 100px;
 }
 
-.keysContainer {
+.keys-container {
     height: var(--keys-container-height);
     padding: 25px;
-}
-
-.blackKeysContainer {
-    display: inline-block;
-    height: calc((var(--keys-container-height) / 2) + 30px);
-    position: relative;
-    bottom: 263px;
-    left: 30px;
-}
-
-.whiteKeysContainer {
-    display: inline-block;
-    height: inherit;
 }

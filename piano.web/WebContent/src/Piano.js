@@ -39,92 +39,81 @@ export class Piano {
      * @private
      */
     buildKeys() {
-        // TODO remove key-specific containers to prevent issue of not being able
-        // to click a white key in between two black keys.
-
 	    let keysContainer = /** @type {HTMLDivElement} */ document.createElement('div');
-	    keysContainer.classList.add('keysContainer');
+	    keysContainer.classList.add('keys-container');
 	    this.el.appendChild(keysContainer);
 
 	    // Create white keys.
-	    let whiteKeysContainer = /** @type {HTMLDivElement} */ document.createElement('div');
-        whiteKeysContainer.classList.add('whiteKeysContainer');
-        keysContainer.appendChild(whiteKeysContainer);
-
         this.c4Key = new Key(true, 'C4.mp3', 'C');
         this.allKeys.push(this.c4Key);
-        whiteKeysContainer.appendChild(this.c4Key.el);
+        keysContainer.appendChild(this.c4Key.el);
 
         this.d4Key = new Key(true, 'D4.mp3', 'D');
         this.allKeys.push(this.d4Key);
-        whiteKeysContainer.appendChild(this.d4Key.el);
+        keysContainer.appendChild(this.d4Key.el);
 
         this.e4Key = new Key(true, 'E4.mp3', 'E');
         this.allKeys.push(this.e4Key);
-        whiteKeysContainer.appendChild(this.e4Key.el);
+        keysContainer.appendChild(this.e4Key.el);
 
         this.f4Key = new Key(true, 'F4.mp3', 'F');
         this.allKeys.push(this.f4Key);
-        whiteKeysContainer.appendChild(this.f4Key.el);
+        keysContainer.appendChild(this.f4Key.el);
 
         this.g4Key = new Key(true, 'G4.mp3', 'G');
         this.allKeys.push(this.g4Key);
-        whiteKeysContainer.appendChild(this.g4Key.el);
+        keysContainer.appendChild(this.g4Key.el);
 
         this.a4Key = new Key(true, 'A4.mp3', 'A');
         this.allKeys.push(this.a4Key);
-        whiteKeysContainer.appendChild(this.a4Key.el);
+        keysContainer.appendChild(this.a4Key.el);
 
         this.b4Key = new Key(true, 'B4.mp3', 'B');
         this.allKeys.push(this.b4Key);
-        whiteKeysContainer.appendChild(this.b4Key.el);
+        keysContainer.appendChild(this.b4Key.el);
 
         this.c5Key = new Key(true, 'C5.mp3', 'C');
         this.allKeys.push(this.c5Key);
-        whiteKeysContainer.appendChild(this.c5Key.el);
+        keysContainer.appendChild(this.c5Key.el);
 
         this.d5Key = new Key(true, 'D5.mp3', 'D');
         this.allKeys.push(this.d5Key);
-        whiteKeysContainer.appendChild(this.d5Key.el);
+        keysContainer.appendChild(this.d5Key.el);
 
         this.e5Key = new Key(true, 'E5.mp3', 'E');
         this.allKeys.push(this.e5Key);
-        whiteKeysContainer.appendChild(this.e5Key.el);
+        keysContainer.appendChild(this.e5Key.el);
 
         // Create black keys.
-        let blackKeysContainer = /** @type {HTMLDivElement} */ document.createElement('div');
-        blackKeysContainer.classList.add('blackKeysContainer');
-        keysContainer.appendChild(blackKeysContainer);
-
         this.db4Key = new Key(false, 'Db4.mp3', 'D♭');
         this.allKeys.push(this.db4Key);
-        blackKeysContainer.appendChild(this.db4Key.el);
+        keysContainer.appendChild(this.db4Key.el);
 
         this.eb4Key = new Key(false, 'Eb4.mp3', 'E♭');
         this.allKeys.push(this.eb4Key);
-        blackKeysContainer.appendChild(this.eb4Key.el);
+        keysContainer.appendChild(this.eb4Key.el);
 
         this.gb4Key = new Key(false, 'Gb4.mp3', 'G♭');
         this.gb4Key.el.classList.add('Gb4');
         this.allKeys.push(this.gb4Key);
-        blackKeysContainer.appendChild(this.gb4Key.el);
+        keysContainer.appendChild(this.gb4Key.el);
         
         this.ab4Key = new Key(false, 'Ab4.mp3', 'A♭');
         this.allKeys.push(this.ab4Key);
-        blackKeysContainer.appendChild(this.ab4Key.el);
+        keysContainer.appendChild(this.ab4Key.el);
 
         this.bb4Key = new Key(false, 'Bb4.mp3', 'B♭');
         this.allKeys.push(this.bb4Key);
-        blackKeysContainer.appendChild(this.bb4Key.el);
+        keysContainer.appendChild(this.bb4Key.el);
 
         this.db5Key = new Key(false, 'Db5.mp3', 'D♭');
         this.db5Key.el.classList.add('Db5');
         this.allKeys.push(this.db5Key);
-        blackKeysContainer.appendChild(this.db5Key.el);
+        keysContainer.appendChild(this.db5Key.el);
 
         this.eb5Key = new Key(false, 'Eb5.mp3', 'E♭');
         this.allKeys.push(this.eb5Key);
-        blackKeysContainer.appendChild(this.eb5Key.el);
+        keysContainer.appendChild(this.eb5Key.el);
     }
 
     /**

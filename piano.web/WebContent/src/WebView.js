@@ -1,4 +1,3 @@
-// ?? import { htmlDomElementFactory } from './util/html-util.js';
 import { Piano } from './Piano.js';
 
 function buildPiano() {
