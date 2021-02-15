@@ -1,10 +1,11 @@
 @import 'Key.css';
 :root {
     --keys-container-height: 260px;
+    --piano-color: #8c8c8c;
 }
 
 .piano {
-    background-color: #8c8c8c;
+    background-color: var(--piano-color);
     outline: solid;
     width: 800px;
     margin: auto;
